@@ -75,7 +75,9 @@ export class MediumEditorDirective implements OnInit, OnChanges, OnDestroy {
    */
   updateModel(): void {
     let value = this.editor.getContent();
-    value = value.replace(/&nbsp;/g, '').trim();
+    value = value.replace(/&nbsp;/g, '')
+                 .replace(/<p><br><\/p>/g, '')
+                 .trim();
     this.lastViewModel = value;
     this.update.emit(value);
   }
