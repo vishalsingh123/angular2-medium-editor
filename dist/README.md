@@ -1,7 +1,8 @@
 # angular2-medium-editor
-This is an Angular 2 directive for the [Medium.com inline editor clone](https://github.com/yabwe/medium-editor) by Davi Ferreira, derived from the [AngularJS medium editor directive](https://github.com/thijsw/angular-medium-editor).
+This is an Angular 2 directive for the [Medium.com inline editor clone](https://github.com/yabwe/medium-editor) by Davi Ferreira, derived from the [AngularJS medium editor directive](https://github.com/thijsw/angular-medium-editor), and forked from progress made by Thijs on [angular-medium-editor](https://github.com/thijsw/angular-medium-editor).
 
-## Installing the Directive
+Currently updated to support *Angular 7*
+## Import the Module
 
 Install with [Npm](https://www.npmjs.com/):
 
@@ -9,31 +10,30 @@ Install with [Npm](https://www.npmjs.com/):
 $ npm install --save angular2-medium-editor
 ```
 
-[Medium editor](https://github.com/yabwe/medium-editor) is a required peer dependency.
+[Medium editor](https://github.com/yabwe/medium-editor) is a required peer dependency, so you'll need to install it alongside this angular wrapper:
 
 ```bash
 $ npm install --save medium-editor
 ```
 
-If all goes well, the angular2-medium-editor package should import medium-editor from your node_modules.
+The `angular2-medium-editor` package should import medium-editor from your node_modules.
 
-Finally, import the directive into your project:
+Finally, import the module into your project:
 
 ```typescript
-import { MediumEditorDirective } from 'angular2-medium-editor'
+import { MediumEditorModule } from 'angular2-medium-editor'
 ```
-
-And add the directive to your Declarations:
 
 ```typescript
   @NgModule({
     ...
     bootstrap: [ AppComponent ],
-    declarations: [
-      MediumEditorDirective,
+    imports: [
+      MediumEditorModule,
       ...
 ```
 
+The module provides the directive to your app, and you're ready to use it in your templates.
 
 ## Usage
 
