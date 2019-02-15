@@ -9,7 +9,7 @@ Install with [Npm](https://www.npmjs.com/):
 $ npm install --save angular2-medium-editor
 ```
 
-It is required to include the [Medium editor](https://github.com/yabwe/medium-editor) in your Angular 2 project as well.
+[Medium editor](https://github.com/yabwe/medium-editor) is a required peer dependency.
 
 ```bash
 $ npm install --save medium-editor
@@ -20,7 +20,7 @@ If all goes well, the angular2-medium-editor package should import medium-editor
 Finally, import the directive into your project:
 
 ```typescript
-  import { MediumEditorDirective } from 'angular2-medium-editor/medium-editor.directive.ts';
+import { MediumEditorDirective } from 'angular2-medium-editor'
 ```
 
 And add the directive to your Declarations:
