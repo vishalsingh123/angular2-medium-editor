@@ -1,4 +1,4 @@
-import { Directive, ElementRef, EventEmitter, Input, Output, ɵlooseIdentical, NgModule } from '@angular/core';
+import { Directive, ElementRef, EventEmitter, Input, Output, NgModule } from '@angular/core';
 import * as MediumEditor from 'medium-editor';
 
 /**
@@ -97,7 +97,7 @@ class MediumEditorDirective {
         if (change.isFirstChange()) {
             return true;
         }
-        return !ɵlooseIdentical(viewModel, change.currentValue);
+        return !Object.is(viewModel, change.currentValue);
     }
 }
 MediumEditorDirective.decorators = [
